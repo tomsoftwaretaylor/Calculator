@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Maths</title>
+</head>
+<body>
+    <label for = "inputNumber1"> First number </label>
+    <input type="text" id="inputID1" name="inputNumber1"><br><br>
+    <label for = "inputNumber2"> Second number </label>
+    <input type="text" id="inputID2" name="inputNumber2"><br><br>
+    <button onclick="addTwoNumbers()">Add </button><br><br>  <!-- Add button -->
+    <button onclick="subtractTwoNumbers()">Subtract</button>  <!-- Subtract button -->
+    <button onclick="multiplyTwoNumbers()">Multiply</button>  <!-- Multiply button -->
+    <button onclick="divideTwoNumbers()">Divide</button>  <!-- Divide button -->
+    
+
+    <!-- Display answer in paragraph -->
+    
+    <p id="resultID"></p>
+
+
+    <script>
+        
+        
+        function getTwoNumbers(){
+            // Get the values from the input fields
+            let number1 = Number(document.getElementById("inputID1").value);
+            let number2 = Number(document.getElementById("inputID2").value);
+            return [number1, number2];
+        }
+         
+
+        function addTwoNumbers(){
+           
+            
+            let numbers = getTwoNumbers();
+            let result = numbers[0] + numbers[1];
+            // Display the result
+            displayAnswer(result);
+        }
+
+         function subtractTwoNumbers(){
+           
+            let numbers = getTwoNumbers();
+            let result = numbers[0] - numbers[1];
+            // Display the result
+            displayAnswer(result);
+        }
+
+         function multiplyTwoNumbers(){
+           
+           
+            // Multiply the two numbers
+            let numbers = getTwoNumbers();
+            let result = numbers[0] * numbers[1];
+            // Display the result
+            displayAnswer(result);
+        }
+        
+         function divideTwoNumbers(){
+           
+            let numbers = getTwoNumbers();
+            // Divide the two numbers
+            // ensure that the second number is not zero to avoid division by zero error
+            if (numbers[1] == 0) {
+                displayAnswer("Error: Division by zero is not allowed.");
+               
+            }
+            else{
+                 let result = numbers[0] / numbers[1];
+                // Display the result
+                displayAnswer(result);
+            }
+
+           
+        }
+
+        function displayAnswer(calculatedResult){
+            document.getElementById("resultID").innerHTML = "Answer: " + calculatedResult;
+        }
+
+    </script>
+</body>
+</html>

@@ -10,9 +10,21 @@
     <input type="text" id="inputID1" name="inputNumber1"><br><br>
     <label for = "inputNumber2"> Second number </label>
     <input type="text" id="inputID2" name="inputNumber2"><br><br>
-    <button onclick="addTwoNumbers()">Add </button><br><br>
+    <button onclick="addTwoNumbers()">Add </button><br><br>  <!-- Add button -->
+    <button onclick="subtractTwoNumbers()">Subtract</button>  <!-- Subtract button -->
+    <button onclick="multiplyTwoNumbers()">Multiply</button>  <!-- Multiply button -->
+    <button onclick="divideTwoNumbers()">Divide</button>  <!-- Divide button -->
+    
+
+    <!-- Display answer in paragraph -->
+    
     <p id="resultID"></p>
+
+
     <script>
+        
+        
+        
         function addTwoNumbers(){
            
             // Get the values from the input fields
@@ -23,6 +35,40 @@
             // Display the result
             document.getElementById("resultID").innerHTML = "Ans: " + result;
         }
+
+         function subtractTwoNumbers(){
+           
+            // Get the values from the input fields
+            number1 = Number(document.getElementById("inputID1").value);
+            number2 = Number(document.getElementById("inputID2").value);
+            // Subtract the two numbers
+            result = number1 - number2;
+            // Display the result
+            document.getElementById("resultID").innerHTML = "Ans: " + result;
+        }
+
+         function multiplyTwoNumbers(){
+           
+            // Get the values from the input fields
+            number1 = Number(document.getElementById("inputID1").value);
+            number2 = Number(document.getElementById("inputID2").value);
+            // Multiply the two numbers
+            result = number1 * number2;
+            // Display the result
+            document.getElementById("resultID").innerHTML = "Ans: " + result;
+        }
+        
+         function divideTwoNumbers(){
+           
+            // Get the values from the input fields
+            number1 = Number(document.getElementById("inputID1").value);
+            number2 = Number(document.getElementById("inputID2").value);
+            // Divide the two numbers
+            result = number1 / number2;
+            // Display the result
+            document.getElementById("resultID").innerHTML = "Ans: " + result;
+        }
+
     </script>
 </body>
 </html>
