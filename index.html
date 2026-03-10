@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Maths</title>
+</head>
+<body>
+    <label for = "inputNumber1"> First number </label>
+    <input type="text" id="inputID1" name="inputNumber1"><br><br>
+    <label for = "inputNumber2"> Second number </label>
+    <input type="text" id="inputID2" name="inputNumber2"><br><br>
+    <button onclick="addTwoNumbers()">Add </button><br><br>
+    <p id="resultID"></p>
+    <script>
+        function addTwoNumbers(){
+           
+            // Get the values from the input fields
+            number1 = Number(document.getElementById("inputID1").value);
+            number2 = Number(document.getElementById("inputID2").value);
+            // Add the two numbers
+            result = number1 + number2;
+            // Display the result
+            document.getElementById("resultID").innerHTML = "Ans: " + result;
+        }
+    </script>
+</body>
+</html>
